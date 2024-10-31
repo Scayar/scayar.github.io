@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scary Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="scary-body">
+    <video autoplay loop muted class="background-video">
+        <source src="scary-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <audio autoplay loop>
+        <source src="scary-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+    <div class="info">
+        <h1 class="scary-h1">SCAYAR STEALS YOUR INFORMATION!</h1>
+        <div class="info-section">
+            <p class="scary-p">IP Address: <span id="ip-address">87.212.31.110</span></p>
+            <p class="scary-p">Country: <span id="country">The Netherlands</span></p>
+            <p class="scary-p">State: <span id="state">South Holland</span></p>
+            <p class="scary-p">City: <span id="city">The Hague</span></p>
+            <p class="scary-p">Zip Code: <span id="zip">2523</span></p>
+            <p class="scary-p">Latitude and Longitude: <span id="lat-lon">52.0541, 4.3242</span></p>
+            <p class="scary-p">Timezone: <span id="timezone">Europe/Amsterdam</span></p>
+            <p class="scary-p">Current Time: <span id="current-time"></span></p>
+            <p class="scary-p">Device Type: <span id="device-type">Desktop</span></p>
+            <p class="scary-p">Browser: <span id="browser-info"></span></p>
+            <p class="scary-p">Operating System: <span id="os-info"></span></p>
+        </div>
+        <div class="warning">
+            <p class="scary-warning">**Caution:** Your location is being tracked!</p>
+            <p class="scary-warning">**Warning:** This information will be used against you!</p>
+            <p class="scary-warning">**Beware:** I know everything about you...</p>
+            <p class="scary-warning">**Attention:** Your secrets are not safe!</p>
+            <p class="scary-warning">**Threat Level:** Extremely High!</p>
+            <p class="scary-warning">**You are being monitored by a presence you cannot escape!**</p>
+        </div>
+        <p class="scary-p">Follow me on Instagram: <a href="https://www.instagram.com/im_scayar" style="color: red;">im_scayar</a></p>
+        <p class="scary-p">**Don't turn back!** You are being watched...</p>
+    </div>
+    <script>
+        function updateTime() {
+            const now = new Date();
+            document.getElementById('current-time').innerText = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false });
+        }
+
+        // Get browser and OS information
+        var userAgent = navigator.userAgent; // Browser info
+        var platform = navigator.platform; // OS info
+
+        // Display information on the page
+        document.getElementById('browser-info').innerText = userAgent; // Show browser
+        document.getElementById('os-info').innerText = platform; // Show OS
+
+        setInterval(updateTime, 1000);
+        updateTime();
+
+        // Redirect to Instagram on any click on the page
+        document.body.addEventListener('click', function() {
+            window.location.href = 'https://www.instagram.com/im_scayar';
+        });
+    </script>
+</body>
+</html>

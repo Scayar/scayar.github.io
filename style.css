@@ -1,0 +1,87 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.cute-body {
+    background: url('cute-cat.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+}
+
+.content {
+    text-align: center;
+}
+
+.click-here {
+    font-size: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.click-here:hover {
+    transform: scale(1.1);
+}
+
+.scary-body {
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.info {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    text-align: center;
+}
+
+.scary-h1 {
+    font-size: 50px;
+    color: red;
+    text-shadow: 2px 2px 5px black;
+    margin-bottom: 20px;
+}
+
+.info-section {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+.scary-p {
+    font-size: 24px;
+    margin: 10px 0;
+    color: white;
+    text-shadow: 1px 1px 3px black;
+}
+
+.warning {
+    margin: 20px 0;
+}
+
+.scary-warning {
+    font-size: 26px;
+    color: red;
+    text-shadow: 1px 1px 5px black;
+    font-weight: bold;
+}
